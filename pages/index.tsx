@@ -36,7 +36,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="apppad-theme-controller">
+          <div className="apppad-theme-controller animate__animated animate__delay-2s animate__zoomInLeft">
             <div className="apppad-theme-controller__switch">
               <Image src={theme === 'light' ? "/sun-active.svg" : "/sun.svg"} width={10} height={10} alt="sun" onClick={() => setTheme('light')} />
               <div style={{ fontSize: 36, color: theme === 'light' ? '#786394' : '#fff', fontWeight: 'bolder' }}>{`/`}</div>
