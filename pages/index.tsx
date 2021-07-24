@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
+import SocialButton from '../components/social-button'
 
 export default function Home() {
   const [theme, setTheme] = React.useState('light');
@@ -8,10 +9,12 @@ export default function Home() {
   const colors: any = {
     light: {
       color: '#786394',
+      backgroundColor: '#786394',
     },
 
     dark: {
       color: '#ffffff',
+      backgroundColor: '#1D0E31',
     }
   }
 
@@ -27,7 +30,7 @@ export default function Home() {
         <div>
           <div className="apppad-title">
             <div className="apppad-title-container">
-              <Image src="/title.svg" layout="fill" alt="apppad-title"
+              <Image src={theme === 'dark' ? "/title.svg" : '/title_light.svg'} layout="fill" alt="apppad-title"
               />
             </div>
           </div>
@@ -42,7 +45,7 @@ export default function Home() {
           </div>
 
           <div className="apppad-container-border">
-            <div className="apppad-container">
+            <div className="apppad-container" style={{ backgroundColor: colors[theme].backgroundColor }}>
               <div className="apppad-container__button apppad-container__button-tracker">
               </div>
 
@@ -76,10 +79,10 @@ export default function Home() {
           </div>
 
           <div className="apppad-social">
-            <div className="apppad-social-icon discord"></div>
-            <div className="apppad-social-icon medium"></div>
-            <div className="apppad-social-icon twitter"></div>
-            <div className="apppad-social-icon telegram"></div>
+            <SocialButton icon="discord" theme={theme} />
+            <SocialButton icon="medium" theme={theme} />
+            <SocialButton icon="twitter" theme={theme} />
+            <SocialButton icon="telegram" theme={theme} />
           </div>
         </div>
       </div>
