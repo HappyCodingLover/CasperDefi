@@ -1,0 +1,250 @@
+.apppad{
+    min-height: 100vh;
+    background-image: url('../../public/bg-apppad.svg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 50px;
+    }
+
+    &-title {
+        width: 600px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+
+        &-container{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-right: 24px;
+            margin-left: 24px;
+            width: calc(100vw - 48px);
+        }
+    }
+
+    &-theme-controller{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        width: 550px;
+        margin: auto;
+        margin-top: -50px;
+        margin-bottom: 40px;
+
+        &__switch{
+            display: flex;
+            align-items: center;
+            flex: 1;
+
+            div{
+                margin: 10px;
+            }
+        }
+
+        &__text{
+            font-size: 36px;
+            font-weight: bolder;
+
+            @media screen and (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-right: 24px;
+            margin-left: 24px;
+            width: calc(100vw - 48px);
+            margin-top: -30px;
+        }
+    }
+
+    &-container-border{
+        border-radius: 55px;
+        background: linear-gradient(282.66deg, #CD64CA -5.31%, #8A96D4 17.11%, #39D3E1 44.47%, #D85DA4 74.26%, #C75E74 97.39%);
+        max-width: 1460px;
+        padding: 10px;
+        margin: auto;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 768px) {
+            margin-right: 24px;
+            margin-left: 24px;
+            width: calc(100vw - 48px);
+        }
+
+    }
+
+    &-container{
+        border-radius: 45px;
+        background-color: #1D0E31;
+        padding: 20px;
+        
+        &__button{
+            width: 20%;
+            display: inline-flex;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 90% 90%;
+            height: 200px;
+
+            @media screen and (max-width: 768px) {
+                width: 50%;
+                height: 100px;
+            }
+
+            &:hover{
+                background-size: 90% 90%;
+            }
+        }
+
+        &__button-tracker{
+            background-image: url('../../public/apppad-icons/tracker.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/tracker-hover.svg');
+            }
+        }
+
+        &__button-farms{
+            background-image: url('../../public/apppad-icons/farms.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/farms-hover.svg');
+            }
+        }
+
+        &__button-bridge{
+            background-image: url('../../public/apppad-icons/bridge.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/bridge-hover.svg');
+            }
+        }
+
+        &__button-insurance{
+            background-image: url('../../public/apppad-icons/insurance.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/insurance-hover.svg');
+            }
+        }
+
+        &__button-shop{
+            background-image: url('../../public/apppad-icons/shop.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/shop-hover.svg');
+            }
+        }
+
+        &__button-wallet{
+            background-image: url('../../public/apppad-icons/wallet.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/wallet-hover.svg');
+            }
+        }
+
+        &__button-nft{
+            background-image: url('../../public/apppad-icons/nft.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/nft-hover.svg');
+            }
+        }
+
+        &__button-api{
+            background-image: url('../../public/apppad-icons/api.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/api-hover.svg');
+            }
+        }
+
+        &__button-casperpad{
+            background-image: url('../../public/apppad-icons/casperpad.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/casperpad-hover.svg');
+            }
+        }
+
+        &__button-docs{
+            background-image: url('../../public/apppad-icons/docs.svg');
+
+            &:hover{
+                background-image: url('../../public/apppad-icons/docs-hover.svg');
+            }
+        }
+    }
+
+    &-social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        &-icon{
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-position: center;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            background-color: #1D0E31;
+
+            &:hover{
+                background-color: #fff;
+            }
+        }
+
+        .discord{
+            background-image: url('../../public/social-icons/discord.svg');
+
+            &:hover{
+                background-image: url('../../public/social-icons/discord-hover.svg');
+            }
+        }   
+
+        .medium{
+            background-image: url('../../public/social-icons/medium.svg');
+
+            &:hover{
+                background-image: url('../../public/social-icons/medium-hover.svg');
+            }
+        }
+
+        .twitter{
+            background-image: url('../../public/social-icons/twitter.svg');
+
+            &:hover{
+                background-image: url('../../public/social-icons/twitter-hover.svg');
+            }
+        }
+
+        .telegram{
+            background-image: url('../../public/social-icons/telegram.svg');
+
+            &:hover{
+                background-image: url('../../public/social-icons/telegram-hover.svg');
+            }
+        }
+    }
+}
