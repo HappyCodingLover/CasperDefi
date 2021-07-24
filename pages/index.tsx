@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import SocialButton from '../components/social-button'
+import 'animate.css';
 
 export default function Home() {
   const [theme, setTheme] = React.useState('light');
@@ -44,7 +45,7 @@ export default function Home() {
             <div className="apppad-theme-controller__text" style={{ color: colors[theme].color }}>Multichain Defi Suite</div>
           </div>
 
-          <div className="apppad-container-border">
+          <div className="apppad-container-border animate__animated animate__flipInY">
             <div className="apppad-container" style={{ backgroundColor: colors[theme].backgroundColor }}>
               <div className="apppad-container__button apppad-container__button-tracker">
               </div>
@@ -78,7 +79,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="apppad-social">
+          <div className="apppad-social animate__animated animate__delay-1s animate__zoomInDown">
             <SocialButton icon="discord" theme={theme} />
             <SocialButton icon="medium" theme={theme} />
             <SocialButton icon="twitter" theme={theme} />
